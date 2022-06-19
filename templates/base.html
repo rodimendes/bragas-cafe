@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+        <link rel="stylesheet" href="static/css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Fascinate+Inline&family=Fredericka+the+Great&family=Pacifico&family=Patrick+Hand&family=Permanent+Marker&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Courgette&family=Dancing+Script:wght@400;700&family=Indie+Flower&family=Pacifico&family=Shadows+Into+Light&display=swap"
+            rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Fascinate+Inline&family=Fredericka+the+Great&family=Pacifico&family=Patrick+Hand&family=Permanent+Marker&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header class='header'>
+            <h1><a href="{{ url_for('home') }}">Braga's Cafes</a></h1>
+            <nav>
+                <ul class='menu'>
+                    <li>
+                        <a href="{{ url_for('about') }}">About the project</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('contact') }}">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#">API</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class='main'>
+            {% block content %}{% endblock %}
+        </div>
+        <footer class='footer'>
+            <p>Made with ❤️ and 😊 in 🇵🇹 by MenDesign</p>
+            <p>{{ current_year }}</p>
+        </footer>
+    </body>
+</html>
