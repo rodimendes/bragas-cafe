@@ -16,8 +16,10 @@
 }
 
 body {
-    background-color: #fff7e4;
+    /* background-color: #fff7e4; */
     font-family: "Indie Flower";
+    background-image: url(/static/pc_coffee-bg.webp);
+    background-size: cover;
 }
 
 .header {
@@ -155,4 +157,19 @@ font-family: 'Shadows Into Light', cursive;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 100;
     font-size: 80%;
+}
+
+
+/* ABOUT */
+
+
+.about-header {
+    width: 60vw;
+    margin: 0 400px 0;
+    line-height: 2rem;
+}
+
+.about-header p {
+    text-align: center;
+    margin-top: 60px;
 }
