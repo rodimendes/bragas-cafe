@@ -18,8 +18,10 @@
 body {
     /* background-color: #fff7e4; */
     font-family: "Indie Flower";
-    background-image: url(/static/pc_coffee-bg.webp);
-    background-size: cover;
+    background-image: url(/static/imattsmart-84a31uygTxc-unsplash.jpg);
+    background-size: 100vw;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .header {
@@ -31,7 +33,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #A64B2A;
+    background-color: #a64b2ad1;
     box-shadow: 0 0 25px grey;
 }
 
@@ -86,6 +88,12 @@ body {
 .submenu li a:hover {
     background-color: #A64B2A;
     color: #FFEBC1;
+}
+
+.overlay {
+    background-color: rgba(210, 171, 125, .3);
+    /* margin: 50px; */
+    padding: 30px;
 }
 
 .main {
@@ -149,7 +157,7 @@ font-family: 'Shadows Into Light', cursive;
     position: fixed;
     bottom: 0;
     width: 100vw;
-    height: 10vh;
+    height: 7vh;
     display: flex;
     justify-content: center;
     align-items: center;
