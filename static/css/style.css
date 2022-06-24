@@ -18,10 +18,11 @@
 body {
     /* background-color: #fff7e4; */
     font-family: "Indie Flower";
-    background-image: url(/static/imattsmart-84a31uygTxc-unsplash.jpg);
+    background-image: url(/static/home-bg.jpg);
     background-size: 100vw;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .header {
@@ -91,7 +92,7 @@ body {
 }
 
 .overlay {
-    background-color: rgba(210, 171, 125, .3);
+    background-color: rgba(210, 171, 125, .4);
     /* margin: 50px; */
     padding: 30px;
 }
@@ -180,4 +181,8 @@ font-family: 'Shadows Into Light', cursive;
 .about-header p {
     text-align: center;
     margin-top: 60px;
+}
+
+.teste {
+    border-radius: 5px;
 }

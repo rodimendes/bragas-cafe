@@ -3,5 +3,10 @@
 {% block title %}Computer Friendly - Contact{% endblock %}
 
 {% block content %}
+
 <h1>CONTACT</h1>
+
+{{ form.csrf_token }}
+{{ form.cafe_name.label }} {{ form.cafe_name(size=30, class_='teste') }}
+
 {% endblock %}
