@@ -1,3 +1,7 @@
+:root {
+    --text-body-color: rgb(80, 80, 80);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +17,11 @@
         background-color: #d5ac5a;
         color: white;
     }
+}
+
+.icons {
+    font-size: 40px;
+    margin: 10px;
 }
 
 body {
@@ -60,9 +69,10 @@ body {
     border-radius: 7px;
     color: #ffebc1;
     text-decoration: none;
-    /* font-family: 'Indie Flower', cursive; */
-    font-weight: lighter;
+    font-family: 'Patrick Hand';
+    font-size: 20px;
     display: block;
+
 }
 
 .menu > li:hover a {
@@ -134,12 +144,15 @@ font-family: 'Shadows Into Light', cursive;
 
 .button {
     margin: 30px auto;
-    padding: 10px;
+    padding: 15px;
     border-radius: 10px;
     border: 2px outset #FFEBC1;
     background-color: #FFEBC1;
     box-shadow: 0 0 2px grey;
-    font-family: "Indie Flower";
+    font-family: "Patrick Hand";
+    letter-spacing: 2px;
+    font-size: 1rem;
+    font-weight: 100;
 }
 
 .button:hover {
@@ -181,8 +194,31 @@ font-family: 'Shadows Into Light', cursive;
 .about-header p {
     text-align: center;
     margin-top: 60px;
+    font-family: 'Patrick Hand';
+    font-weight: 100;
+    color: rgb(80, 80, 80);
+    letter-spacing: .6px;
 }
 
-.teste {
+.contact p {
+    width: 30vw;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Patrick Hand';
+    font-weight: 100;
+    font-size: 22px;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    color: var(--text-body-color);
+}
+
+.contact-fields {
+    border: 1px solid white;
+    padding: 7px;
     border-radius: 5px;
+    width: 300px;
+    height: 2rem;
+    font-family: 'Patrick Hand';
+    letter-spacing: 2px;
+    font-size: 18px;
 }

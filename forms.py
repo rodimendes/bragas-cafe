@@ -8,4 +8,4 @@ class RequestInclusion(FlaskForm):
     cafe_name = StringField(label='Cafe name:', validators=[DataRequired()])
     address = StringField(label='Address:', validators=[DataRequired()])
     email = EmailField(label='E-mail:', validators=[Email()])
-    submit = SubmitField(label='Send request')
+    submit = SubmitField(label='Come visit me')
