@@ -5,8 +5,13 @@
 {% block content %}
 
 <h1>☕️ Cafes Computer Friendly 👨🏻‍💻</h1>
-<h2>🌧 Rain risk! 🌧 </h2>
-<h3>Find a protected place to dive deep into your studies, enjoying the rain sounds...</h3>
+{% if weather < 800 %}
+  <h2>🌧 Hard to see blue sky! ❄️</h2>
+  <h3>Find a protected place to dive deep into your studies, enjoying the rain sounds...</h3>
+{% else %}
+  <h2>☀️ Sun! ☀️</h2>
+  <h3>Good weather for the terraces and open spaces, enjoy it!</h3>
+{% endif %}
 <div>
     <a href="#"><input class="button" type="button" value="Check it out the dreams list"></a>
 </div>
