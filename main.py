@@ -4,6 +4,7 @@ from forms import RequestInclusion
 from api import weather_checker
 import os
 
+
 app = Flask(__name__)
 app.secret_key = os.environ.get('APP_SECRET_KEY')
 year = dt.datetime.now().year
@@ -32,4 +33,3 @@ def success():
 
 if __name__ == "__main__":
     app.run(debug=True)
-
