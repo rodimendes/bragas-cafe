@@ -1,1 +1,1 @@
-# <center>BRAGA'S Cafes Friendly
+# BRAGA'S Cafes Friendly
