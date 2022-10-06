@@ -8,4 +8,4 @@ geolocator = Nominatim(user_agent='minha-aplicacao')
 
 location = geolocator.geocode('Helsinki')
 
-print(location)
+print(location.latitude, location.longitude)
