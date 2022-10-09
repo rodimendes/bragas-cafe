@@ -6,6 +6,6 @@ from geopy.geocoders import Nominatim
 
 geolocator = Nominatim(user_agent='minha-aplicacao')
 
-location = geolocator.geocode('Helsinki')
+location = geolocator.geocode('Braga')
 
 print(location.latitude, location.longitude)
