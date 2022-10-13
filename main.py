@@ -1,21 +1,31 @@
-from crypt import methods
 import datetime as dt
 from flask import Flask, render_template, request
 from forms import NewLocation, RequestInclusion
-from api import weather_checker
+from api import weather_checker, city_lat_long
 import os
-
+import geocoder
 
 app = Flask(__name__)
 app.secret_key = os.environ.get('APP_SECRET_KEY')
+
+my_place = geocoder.ip('me').json
+current_city = my_place['city']
+current_latitude = my_place['lat']
+current_longitude = my_place['lng']
+
 year = dt.datetime.now().year
-weather, weather_icon = weather_checker()
+weather = weather_checker(latitude=current_latitude, longitude=current_longitude)
+
 
 @app.route("/", methods=['GET', 'POST'])
 def home():
-    city = request.form
-    print(city.keys)
-    return render_template("index.html", current_year=year, weather=weather, city_name=city)
+    if request.method == 'POST':
+        form_new_city = request.form
+        new_city = form_new_city['city_name']
+        new_lat_long = city_lat_long(new_city)
+        weather = weather_checker(latitude=new_lat_long[0], longitude=new_lat_long[1])
+        return render_template("index.html", current_year=year, weather=weather, city_name=new_city)
+    return render_template("index.html", current_year=year, weather=weather, city_name=current_city)
 
 
 @app.route("/about")

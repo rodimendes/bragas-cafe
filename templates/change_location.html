@@ -6,12 +6,11 @@
 
 <h1>Choose a new location</h1>
 
-
 <form action="{{ url_for('home') }}" method="post" class='contact'>
   {{ form.csrf_token }}
   <p>
       {{ form.city_name.label }} <br>
-      {{ form.city_name(class_='contact-fields' name='name_city') }}
+      {{ form.city_name(class_='contact-fields') }}
   </p>
   {{ form.submit(class_='button') }}
 </form>
