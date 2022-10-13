@@ -5,13 +5,24 @@
 {% block content %}
 
 <h1>☕️ Cafes Computer Friendly 👨🏻‍💻</h1>
-{% if weather < 800 %}
-  <h2>🌧 Hard to see blue sky! ❄️</h2>
+{% if weather < 600 %}
+  <h2>🌧 It's raining... Hard to see blue sky! 🌧</h2>
   <h3>Find a protected place to dive deep into your studies, enjoying the rain sounds...</h3>
-{% else %}
+  <h5>Based on your current location - {{ city_name }}</h5>
+{% elif 600 < weather < 700 %}
+  <h2>❄️ Snow? Really? ❄️</h2>
+  <h3>Find a warm place to study, enjoying coffee and hot chocolate</h3>
+  <h5>Based on your current location - {{ city_name }}</h5>
+{% elif 700 < weather < 800 %}
+  <h2>🌫 Cloudy with a chance of rain  🌁</h2>
+  <h3>Probably we can not see the sky. Are the clouds on the ground?</h3>
+  <h5>Based on your current location - {{ city_name }}</h5>
+{% elif weather > 800 %}
   <h2>☀️ Sun! ☀️</h2>
   <h3>Good weather for the terraces and open spaces, enjoy it!</h3>
+  <h5>Based on your current location - {{ city_name }}</h5>
 {% endif %}
+<p><a href="{{ url_for('change_location')}}">Change location</a></p>
 <div>
     <a href="#"><input class="button" type="button" value="Check it out the dreams list"></a>
 </div>
