@@ -30,6 +30,8 @@ def city_lat_long(city):
     response = requests.get(url="http://api.openweathermap.org/geo/1.0/direct", params=parameters)
     response.raise_for_status
     city_data = response.json()
+    city_name = city_data[0]['name']
+    city_country = city_data[0]['country']
     lat = city_data[0]['lat']
     long = city_data[0]['lon']
-    return lat, long
+    return lat, long, city_name, city_country

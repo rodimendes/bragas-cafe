@@ -22,10 +22,9 @@ def home():
     if request.method == 'POST':
         form_new_city = request.form
         new_city = form_new_city['city_name']
-        new_lat_long = city_lat_long(new_city)
-        new_weather = weather_checker(latitude=new_lat_long[0], longitude=new_lat_long[1])
-        print(new_weather)
-        return render_template("index.html", current_year=year, weather=new_weather, city_name=new_city)
+        new_lat, new_long, new_city_name, new_country = city_lat_long(new_city)
+        new_weather = weather_checker(latitude=new_lat, longitude=new_long)
+        return render_template("index.html", current_year=year, weather=new_weather, city_name=new_city_name, country=new_country)
     return render_template("index.html", current_year=year, weather=weather, city_name=current_city)
 
 
