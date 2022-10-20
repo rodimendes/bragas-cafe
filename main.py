@@ -4,6 +4,10 @@ from forms import NewLocation, RequestInclusion
 from api import weather_checker, city_lat_long
 import os
 import geocoder
+from dotenv import load_dotenv
+
+
+load_dotenv()
 
 app = Flask(__name__)
 app.secret_key = os.environ.get('APP_SECRET_KEY')
