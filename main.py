@@ -1,7 +1,7 @@
 import datetime as dt
 from flask import Flask, render_template, request
 from forms import NewLocation, RequestInclusion
-from api import weather_checker, city_lat_long
+from api import send_email, weather_checker, city_lat_long
 import os
 import geocoder
 from dotenv import load_dotenv
@@ -37,9 +37,13 @@ def about():
     return render_template("about.html", current_year=year)
 
 
-@app.route("/contact")
+@app.route("/contact", methods=['GET', 'POST'])
 def contact():
     form = RequestInclusion()
+    if request.method == 'POST':
+        data = request.form
+        send_email(data['cafe_name'], data['address'], data['email'])
+        return render_template("successfully_request.html", current_year=year, form=form)
     return render_template("contact.html", current_year=year, form=form)
 
 

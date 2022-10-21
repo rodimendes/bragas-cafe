@@ -6,7 +6,7 @@ from wtforms.validators import DataRequired, Email
 class RequestInclusion(FlaskForm):
     cafe_name = StringField(label='Cafe name:', validators=[DataRequired()])
     address = StringField(label='Address:', validators=[DataRequired()])
-    email = EmailField(label='E-mail:')
+    email = EmailField(label='E-mail:', validators=[DataRequired(), Email()])
     submit = SubmitField(label='Come visit me')
 
 class NewLocation(FlaskForm):

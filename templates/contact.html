@@ -6,7 +6,7 @@
 
 <h1>Request a visit</h1>
 
-<form action="{{ url_for('success') }}" method="post" class='contact'>
+<form action="{{ url_for('contact') }}" method="post" class='contact'>
     {{ form.csrf_token }}
     <p>
         {{ form.cafe_name.label }} <br>
@@ -18,7 +18,7 @@
     </p>
     <p>
         {{ form.email.label }} <br>
-        {{ form.address(class_='contact-fields') }}
+        {{ form.email(class_='contact-fields') }}
     </p>
     {{ form.submit(class_='button') }}
 </form>
