@@ -6,20 +6,17 @@ import os
 import geocoder
 from dotenv import load_dotenv
 
-
 load_dotenv()
-
 app = Flask(__name__)
 app.secret_key = os.environ.get('APP_SECRET_KEY')
 
-my_place = geocoder.ip('me').json
-current_city = my_place['city']
-current_latitude = my_place['lat']
-current_longitude = my_place['lng']
+# my_place = geocoder.ip('me').json
+# current_city = my_place['city']
+# current_latitude = my_place['lat']
+# current_longitude = my_place['lng']
 
 year = dt.datetime.now().year
-weather = weather_checker(latitude=current_latitude, longitude=current_longitude)
-
+weather = weather_checker()
 
 @app.route("/", methods=['GET', 'POST'])
 def home():
@@ -29,8 +26,8 @@ def home():
         new_lat, new_long, new_city_name, new_country = city_lat_long(new_city)
         new_weather = weather_checker(latitude=new_lat, longitude=new_long)
         return render_template("index.html", current_year=year, weather=new_weather, city_name=new_city_name, country=new_country)
-    return render_template("index.html", current_year=year, weather=weather, city_name=current_city)
-
+    else:
+        return render_template("index.html", current_year=year, weather=weather, city_name='Braga', country='PT')
 
 @app.route("/about")
 def about():
@@ -59,4 +56,4 @@ def change_location():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=3000)
