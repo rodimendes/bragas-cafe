@@ -3,7 +3,6 @@ from flask import Flask, render_template, request
 from forms import NewLocation, RequestInclusion
 from api import send_email, weather_checker, city_lat_long
 import os
-import geocoder
 from dotenv import load_dotenv
 
 load_dotenv()
