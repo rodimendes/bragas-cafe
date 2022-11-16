@@ -1,9 +1,10 @@
 import datetime as dt
-from flask import Flask, render_template, request
-from forms import NewLocation, RequestInclusion
+from flask import Flask, render_template, request, redirect, url_for
+from forms import NewLocation, RequestInclusion, CafeForm
 from api import send_email, weather_checker, city_lat_long
 import os
 from dotenv import load_dotenv
+import csv
 
 load_dotenv()
 app = Flask(__name__)
@@ -53,6 +54,23 @@ def change_location():
     form = NewLocation()
     return render_template("change_location.html", form=form)
 
+@app.route("/add", methods=["POST", "GET"])
+def add_cafe():
+    form = CafeForm()
+    if form.validate_on_submit:
+        with open(file='cafe-data.csv', mode='a') as list_cafes: # Include cafes database path into environment variable
+            list_cafes.write(f'\n{form.cafe.data},{form.location.data},{form.opening_time.data},{form.closing_time.data},{form.coffee_rating.data},{form.wifi_signal.data},{form.power.data}')
+        return redirect(url_for('cafes'))
+    return render_template('add.html', form=form)
+
+@app.route('/cafes')
+def cafes():
+    with open('cafe-data.csv', newline='') as csv_file:
+        csv_data = csv.reader(csv_file)
+        list_of_rows = []
+        for row in csv_data:
+            list_of_rows.append(row)
+    return render_template('cafes.html', cafes=list_of_rows)
 
 if __name__ == "__main__":
     app.run(debug=True, port=3000)

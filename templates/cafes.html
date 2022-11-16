@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Computer Friendly - Cafes List{% endblock %}
+
+{% block content %}
+
+<h1>USAR BANCO DE DADOS MYSQL</h1>
+<h1>Which one do you choose for today?</h1>
+
+<table class="cafe-table">
+
+    {% for cafe in cafes %}
+      <tr>
+        {% for item in cafe %}
+          {% if item[0:4] == 'http' %}
+            <td class="cafe-fields"><a href="{{ item }}">Maps Link</a></td>
+          {% else %}
+            <td class="cafe-fields">{{ item }}</td>
+          {% endif %}
+        {% endfor %}
+      </tr>
+    {% endfor %}
+
+</table>
+
+{% endblock %}

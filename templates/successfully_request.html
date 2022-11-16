@@ -1,18 +1,16 @@
 {% extends "base.html" %}
 
 {% block metas %}
-  <meta http-equiv="refresh" content="5; url={{ url_for('home') }}">
+  <meta http-equiv="refresh" content="10; url={{ url_for('home') }}">
 {% endblock %}
 
 {% block title %}Computer Friendly - Contact{% endblock %}
 
 {% block content %}
 
-  <h1>Request sent</h1>
-  <h2>Breathe and wait for us.</h1>
-  <h2>Your suggestion will be available here soon.</h1>
-  <a href="{{ url_for('home') }}">Back to home</a>
+  <h1>🚀 Request sent 🚀</h1>
+  <h2>🧘🏽‍♀️ Breathe and wait for us 🧘🏻‍♂️</h1>
+  <h2>Your suggestion will be available here soon... ⏲</h1>
+  <p>You will be redirected. If not, <a href="{{ url_for('home') }}">click here...</a></p>
 
 {% endblock %}
-
-""" Após 10 segundos, direcionar à página principal. """

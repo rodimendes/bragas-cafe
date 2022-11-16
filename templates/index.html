@@ -26,7 +26,7 @@
 <h5>based on reported location - {{ city_name }} - {{ country }}</h5>
 <p><a href="{{ url_for('change_location')}}">Change location</a></p>
 <div>
-    <a href="#"><input class="button" type="button" value="Check it out the dreams list"></a>
+    <a href='{{ url_for("cafes") }}'><input class="button" type="button" value="Check it out the dreams list"></a>
 </div>
 <div class='includeCafe'>
     <h5>Do you want to include your Cafe? Click <a href='{{ url_for("contact") }}'>here</a>, fill the form and I will make a visit.

@@ -130,7 +130,7 @@ body {
     font-size: 200%;
     /* font-family: 'Indie Flower', cursive; */
 }
-/* 
+/*
 font-family: 'Amatic SC', cursive;
 font-family: 'Pacifico', cursive;
 font-family: 'Patrick Hand', cursive;
@@ -221,4 +221,33 @@ font-family: 'Shadows Into Light', cursive;
     font-family: 'Patrick Hand';
     letter-spacing: 2px;
     font-size: 18px;
+}
+
+/* CAFES LIST */
+
+.cafe-table {
+    margin: 0 auto;
+}
+
+.cafe-fields {
+  border-bottom: 1px dotted white;
+  padding: 4px;
+  border-radius: 5px;
+  width: 200px;
+  height: 2rem;
+  font-family: 'Patrick Hand';
+  letter-spacing: 2px;
+  font-size: 15px;
+}
+
+.cafe-head {
+  border-bottom: 1px solid white;
+  padding: 4px;
+  border-radius: 5px;
+  width: 200px;
+  height: 2rem;
+  font-family: 'Patrick Hand';
+  letter-spacing: 2px;
+  font-size: 18px;
+  font-weight: bold;
 }
