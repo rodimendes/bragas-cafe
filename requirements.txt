@@ -20,7 +20,7 @@ HTMLParser==0.0.2
 httpx==0.24.0
 importlib_metadata==4.12.0
 inotify==0.2.10
-ipython==8.13.2
+ipython==8.13.0
 ipywidgets==8.0.4
 jnius==1.1.0
 keyring==23.13.1
