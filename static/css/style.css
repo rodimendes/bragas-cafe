@@ -26,7 +26,7 @@
 
 body {
     /* background-color: #fff7e4; */
-    font-family: "Indie Flower";
+    font-family: 'Nunito', sans-serif;
     background-image: url(/static/home-bg.jpg);
     background-size: 100vw;
     background-position: center;
@@ -69,8 +69,8 @@ body {
     border-radius: 7px;
     color: #ffebc1;
     text-decoration: none;
-    font-family: 'Patrick Hand';
-    font-size: 20px;
+    font-family: 'Nunito';
+    font-size: 15px;
     display: block;
 
 }
@@ -102,15 +102,15 @@ body {
 }
 
 .overlay {
-    background-color: rgba(210, 171, 125, .4);
+    background-color: rgba(183, 145, 126, 0.6);
     /* margin: 50px; */
-    padding: 30px;
+    padding: 40px;
 }
 
 .main {
     color: black;
     text-align: center;
-    margin: 20vh 0;
+    margin: 11vh 0;
     /* font-family: "Indie Flower"; */
 }
 
@@ -118,41 +118,56 @@ body {
     margin-bottom: 20px;
     font-size: 400%;
     font-weight: 900;
-    font-family: 'Patrick Hand', cursive;
+    font-family: 'Dancing Script', cursive;
 }
 
 .main h2 {
     font-size: 200%;
-    /* font-family: 'Indie Flower', cursive; */
+    font-family: 'Nunito', sans-serif;
+    font-weight: 100;
 }
 
 .main h3 {
-    font-size: 200%;
-    /* font-family: 'Indie Flower', cursive; */
+    font-family: 'Nunito', sans-serif;
+    font-size: 120%;
+    font-weight: bold;
 }
-/*
-font-family: 'Amatic SC', cursive;
-font-family: 'Pacifico', cursive;
-font-family: 'Patrick Hand', cursive;
-font-family: 'Shadows Into Light', cursive;
-*/
+
+.weather-temp {
+    border-bottom: 1px solid black;
+    border-radius: 5%;
+    margin: 0 auto 20px;
+    width: 300px;
+
+}
+
+h4 {
+    font-weight: 100;
+}
+
+.change-location {
+    width: 200px;
+    margin: 10px auto 0;
+    /* border: 1px dotted black; */
+
+}
 
 .main a {
     text-decoration: none;
-    color: black;
+    color: #a64b2ad1;
 }
 
 .button {
-    margin: 30px auto;
+    margin: 15px auto;
     padding: 15px;
     border-radius: 10px;
     border: 2px outset #FFEBC1;
     background-color: #FFEBC1;
     box-shadow: 0 0 2px grey;
-    font-family: "Patrick Hand";
+    font-family: 'Nunito', sans-serif;
     letter-spacing: 2px;
-    font-size: 1rem;
-    font-weight: 100;
+    font-size: 0.8rem;
+    font-weight: 600;
 }
 
 .button:hover {
@@ -160,6 +175,10 @@ font-family: 'Shadows Into Light', cursive;
     animation-name: fillButton;
     animation-duration: 1000ms;
     color: white;
+}
+
+.includeCafe h5 {
+    font-weight: 100;
 }
 
 .includeCafe a {
@@ -176,7 +195,7 @@ font-family: 'Shadows Into Light', cursive;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-weight: 100;
     font-size: 80%;
 }
@@ -194,9 +213,9 @@ font-family: 'Shadows Into Light', cursive;
 .about-header p {
     text-align: center;
     margin-top: 60px;
-    font-family: 'Patrick Hand';
+    font-family: 'Nunito', sans-serif;
     font-weight: 100;
-    color: rgb(80, 80, 80);
+    color: rgb(50, 50, 50);
     letter-spacing: .6px;
 }
 
@@ -204,9 +223,9 @@ font-family: 'Shadows Into Light', cursive;
     width: 30vw;
     margin: 0 auto;
     text-align: center;
-    font-family: 'Patrick Hand';
+    font-family: 'Nunito', sans-serif;
     font-weight: 100;
-    font-size: 22px;
+    font-size: 18px;
     margin-top: 10px;
     letter-spacing: 1px;
     color: var(--text-body-color);
@@ -218,7 +237,7 @@ font-family: 'Shadows Into Light', cursive;
     border-radius: 5px;
     width: 300px;
     height: 2rem;
-    font-family: 'Patrick Hand';
+    font-family: 'Nunito', sans-serif;
     letter-spacing: 2px;
     font-size: 18px;
 }
@@ -235,19 +254,34 @@ font-family: 'Shadows Into Light', cursive;
   border-radius: 5px;
   width: 200px;
   height: 2rem;
-  font-family: 'Patrick Hand';
+  font-family: 'Nunito', sans-serif;
   letter-spacing: 2px;
-  font-size: 15px;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .cafe-head {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
   padding: 4px;
   border-radius: 5px;
   width: 200px;
   height: 2rem;
-  font-family: 'Patrick Hand';
+  font-family: 'Nunito', sans-serif;
   letter-spacing: 2px;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: bold;
+}
+
+/* CAFES FORM */
+
+.add-fields {
+  border: 1px solid white;
+  padding: 7px;
+  border-radius: 5px;
+  width: 300px;
+  height: 2rem;
+  font-family: 'Nunito', sans-serif;
+  letter-spacing: 2px;
+  font-size: 12px;
 }

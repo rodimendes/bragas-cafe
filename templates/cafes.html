@@ -4,22 +4,24 @@
 
 {% block content %}
 
-<h1>USAR BANCO DE DADOS MYSQL</h1>
 <h1>Which one do you choose for today?</h1>
 
 <table class="cafe-table">
 
+  <tr>
+    <td class="cafe-head">Name</td><td class="cafe-head">Map Link</td><td class="cafe-head">City</td><td class="cafe-head">Opening Time</td><td class="cafe-head">Closing Time</td><td class="cafe-head">Coffee Rating</td><td class="cafe-head">Wifi</td><td class="cafe-head">Power</td>
     {% for cafe in cafes %}
-      <tr>
-        {% for item in cafe %}
-          {% if item[0:4] == 'http' %}
-            <td class="cafe-fields"><a href="{{ item }}">Maps Link</a></td>
-          {% else %}
-            <td class="cafe-fields">{{ item }}</td>
-          {% endif %}
-        {% endfor %}
-      </tr>
+    <tr>
+      {% for column in cafe[1:] %}
+        {% if column[:4] == 'http' %}
+          <td class="cafe-fields"><a href="{{ column }}">Map Link</a></td>
+        {% else %}
+          <td class="cafe-fields">{{ column }}</td>
+        {% endif %}
+      {% endfor %}
+    </tr>
     {% endfor %}
+  </tr>
 
 </table>
 

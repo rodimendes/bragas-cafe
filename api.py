@@ -22,9 +22,10 @@ def weather_checker(latitude=41.545448, longitude=-8.426507):
     response = requests.get(url="https://api.openweathermap.org/data/2.5/onecall", params=parameters)
     response.raise_for_status
     weather_data = response.json()
-    current_weather = weather_data['current']['weather'][0]['id']
-    return current_weather
-
+    weather_id = weather_data['current']['weather'][0]['id']
+    current_weather = weather_data['current']['weather'][0]['main']
+    current_temperature = weather_data['current']['temp']
+    return weather_id, current_weather, current_temperature
 
 def city_lat_long(city):
     parameters = {
