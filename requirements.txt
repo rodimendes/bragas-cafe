@@ -47,5 +47,4 @@ unicodedata2==15.0.0
 urllib3_secure_extra==0.1.0
 watchdog==3.0.0
 wmi==1.5.1
-xmlrpclib==1.0.1
 zipp==3.8.1
