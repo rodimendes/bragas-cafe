@@ -22,17 +22,25 @@
 
   {% elif 700 < weather_id < 800 %}
     <div class="weather-temp">
-      <h1 class="icons">🌫 🌁</h1>
+      <h1 class="icons">🌫</h1>
       <h2>{{ temperature }} °C</h2>
     </div>
     <h3>Probably we can not see the sky. Are the clouds on the ground?</h3>
 
   {% elif weather_id == 800 %}
-    <div class="weather-temp">
-      <h1 class="icons">☀️ 🌙</h1>
-      <h2>{{ temperature }} °C</h2>
-    </div>
-    <h3>Good weather for the terraces and open spaces, enjoy it!</h3>
+    {% if current_time < "18:00" %}
+      <div class="weather-temp">
+        <h1 class="icons">☀️</h1>
+        <h2>{{ temperature }} °C</h2>
+      </div>
+      <h3>Good weather for the terraces and open spaces, enjoy it!</h3>
+    {% else %}
+      <div class="weather-temp">
+        <h1 class="icons">🌙</h1>
+        <h2>{{ temperature }} °C</h2>
+      </div>
+      <h3>Good weather for the terraces and open spaces, enjoy it!</h3>
+    {% endif %}
 
   {% elif weather_id > 800 %}
     <div class="weather-temp">

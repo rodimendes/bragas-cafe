@@ -17,7 +17,7 @@ cursor = connection.cursor()
 
 year = dt.datetime.now().year
 weather_id, weather, temperature = weather_checker()
-
+time = dt.datetime.now().time()
 
 @app.route("/", methods=['GET', 'POST'])
 def home():
@@ -26,9 +26,9 @@ def home():
         new_city = form_new_city['city_name']
         new_lat, new_long, new_city_name, new_country = city_lat_long(new_city)
         new_weather_id, new_weather, new_temperature = weather_checker(latitude=new_lat, longitude=new_long)
-        return render_template("index.html", current_year=year, weather_id=new_weather_id, weather=new_weather, temperature=round(new_temperature), city_name=new_city_name, country=new_country)
+        return render_template("index.html", current_year=year, weather_id=new_weather_id, weather=new_weather, temperature=round(new_temperature), city_name=new_city_name, country=new_country, current_time=str(time))
     else:
-        return render_template("index.html", current_year=year, weather_id=weather_id, weather=weather, temperature=round(temperature), city_name='Braga', country='PT')
+        return render_template("index.html", current_year=year, weather_id=weather_id, weather=weather, temperature=round(temperature), city_name='Braga', country='PT', current_time=time)
 
 @app.route("/about")
 def about():
