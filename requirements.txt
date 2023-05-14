@@ -16,7 +16,6 @@ entrypoints==0.4
 exceptiongroup==1.0.4
 Flask==2.2.2
 Flask-Bootstrap==3.3.7.1
-Flask-MySQLdb==1.0.1
 # Editable install with no version control (Flask-WTF==1.0.1)
 -e git+https://github.com/wtforms/flask-wtf#egg=flask-wtf
 future==0.18.2
