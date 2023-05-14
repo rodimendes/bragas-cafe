@@ -4,31 +4,39 @@
 
 {% block content %}
 
-<h1>☕️ Cafes Computer Friendly 👨🏻‍💻</h1>
+<h1>☕️ Cafes Computer Friendly</h1>
 
   {% if weather_id < 600 %}
-    <h2>🌧 It's raining... Hard to see blue sky! 🌧</h2>
-    <h2>{{ temperature }} °C</h2>
+    <div class="weather-temp">
+      <h1 class="icons">🌧</h1>
+      <h2>{{ temperature }} °C</h2>
+    </div>
     <h3>Find a protected place to dive deep into your studies, enjoying the rain sounds...</h3>
 
   {% elif 600 < weather_id < 700 %}
-    <h2>❄️ It's snowing? Really? ❄️</h2>
-    <h2>{{ temperature }} °C</h2>
+    <div class="weather-temp">
+      <h1 class="icons">❄️</h1>
+      <h2>{{ temperature }} °C</h2>
+    </div>
     <h3>Find a warm place to study, enjoying coffee and hot chocolate</h3>
 
   {% elif 700 < weather_id < 800 %}
-    <h2>🌫 Look to the sky... A little strange, I guess...  🌁</h2>
-    <h2>{{ temperature }} °C</h2>
+    <div class="weather-temp">
+      <h1 class="icons">🌫 🌁</h1>
+      <h2>{{ temperature }} °C</h2>
+    </div>
     <h3>Probably we can not see the sky. Are the clouds on the ground?</h3>
 
   {% elif weather_id == 800 %}
-    <h2>☀️ Clear sky! 🌙</h2>
-    <h2>{{ temperature }} °C</h2>
+    <div class="weather-temp">
+      <h1 class="icons">☀️ 🌙</h1>
+      <h2>{{ temperature }} °C</h2>
+    </div>
     <h3>Good weather for the terraces and open spaces, enjoy it!</h3>
 
   {% elif weather_id > 800 %}
     <div class="weather-temp">
-      <h2>🌥 Some clouds! ☁️</h2>
+      <h1 class="icons">🌥</h1>
       <h2>{{ temperature }} °C</h2>
     </div>
     <h3>Up to you! The sky is not clear, but it is not raining. Do you prefer inside or outside?</h3>
