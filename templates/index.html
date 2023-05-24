@@ -56,11 +56,10 @@
   <p><a href="{{ url_for('change_location')}}">Change location</a></p>
 </div>
 <div>
-    <a href='{{ url_for("cafes") }}'><input class="button" type="button" value="Check it out the dreams list"></a>
+  <a href='{{ url_for("cafes", city=city_name) }}'><input class="button" type="button" value="Check it out the dreams list"></a>
 </div>
 <div class='includeCafe'>
-    <h5>Do you want to include your Cafe? Click <a href='{{ url_for("contact") }}'>here</a>, fill the form and I will make a visit.
-    </h5>
+  <h5>Do you want to include your Cafe? Click <a href='{{ url_for("contact") }}'>here</a>, fill the form and I will make a visit.</h5>
 </div>
 
 {% endblock %}
